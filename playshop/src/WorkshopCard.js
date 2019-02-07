@@ -18,7 +18,7 @@ class WorkshopCard extends Component {
                             <h3>IDEAL FOR:</h3>
                             <p>{this.props.idealForText}</p>
                         </div>
-                        <button style={{color: "black", borderColor: this.props.color}}>Learn More</button>
+                        <button style={{color: "black", borderColor: this.props.color, backgroundImage: "linear-gradient(" + this.props.color + "," + this.props.color + ")"}}>Learn More</button>
                     </div>
                 <div className="workshopCardImage">
                 <img src={this.props.image} />

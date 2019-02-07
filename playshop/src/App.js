@@ -94,24 +94,24 @@ class App extends Component {
                 <div className="background"></div>
                 <div className="reviewCard" style={{marginLeft: "0px"}}>
                   <img></img>
-                  <h1>Inspiration Tour</h1>
+                  <h1 style={{color: "#67DDAB"}}>Inspiration Tour</h1>
                   <h2>( 1 - 8 Hours )</h2>
                   <p>Learn from the best, be the best. Inspire the Fire.</p>
-                  <button>Activate Fire</button>
+                  <button style={{color: "#67DDAB", borderColor: "#67DDAB"}}>Activate Fire</button>
                 </div>
                 <div className="reviewCard">
                   <img></img>
-                  <h1>Inspiration Tour</h1>
-                  <h2>( 1 - 8 Hours )</h2>
+                  <h1 style={{color: "#FF9C1C"}}>Play Shop Shop</h1>
+                  <h2>( 2 - 8 Hours )</h2>
                   <p>Learn from the best, be the best. Inspire the Fire.</p>
-                  <button>Activate Fire</button>
+                  <button style={{color: "#FF9C1C", borderColor: "#FF9C1C"}}>Activate Fire</button>
                 </div>
                 <div className="reviewCard" style={{marginRight: "0px"}}>
                   <img></img>
-                  <h1>Inspiration Tour</h1>
-                  <h2>( 1 - 8 Hours )</h2>
+                  <h1 style={{color: "#8eccec"}}>Pop Up Session</h1>
+                  <h2>( 1 Day - 2 Weeks )</h2>
                   <p>Learn from the best, be the best. Inspire the Fire.</p>
-                  <button>Activate Fire</button>
+                  <button style={{color: "#8eccec", borderColor: "#8eccec"}}>Activate Fire</button>
                 </div>
 
           </div>
