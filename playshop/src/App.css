@@ -132,8 +132,15 @@ body {
   margin-top: -60px;
   height: 100%;
   width: 100vw;
-  background: #8ECCEC;
-  transition: stroke-dashoffset 1s;
+
+  background-repeat: no-repeat;
+  background-image: linear-gradient(#8ECCEC, #8ECCEC);
+  background-size: 0% 100%;
+  transition: background-size 0.8s;
+}
+
+.active .summaryBackground {
+  background-size: 100% 100%;
 }
 
 .summaryBackground svg {
@@ -144,6 +151,7 @@ body {
   margin-right: -80px;
   margin-left: calc(70px + 30%);
   position: absolute;
+  clip-path: url(#clipper);
 }
 
 .summaryBackground path {
@@ -151,20 +159,34 @@ body {
   stroke: white;
   stroke-width: 2px;
   stroke-dasharray: 10px;
-  animation: pathSlow 5s linear infinite;
+  /* animation: pathSlow 5s linear infinite; */
   transition: stroke-linecap 1s, stroke-width 1s;
 }
 
-.summaryBackground .backPath {
-  /* stroke: #FF9C1C;
-  /* stroke-dasharray: 5px; */
-  /* animation: pathSlow 3.2s linear infinite; */ 
+.summaryBackground path {
+  stroke: white;
+  stroke-dasharray: 1740px;
+  stroke-dashoffset: 1740px;
+  transition: stroke-dashoffset 3s 0.4s, stroke-dasharray 2s 0.4s;
+  /* animation: pathSlow 3.2s linear infinite;  */
 }
 
-.summaryBackground .backPath path {
-  stroke: #FF9C1C;
+.active path {
+  stroke-dashoffset: 0px;
+  /* stroke-dasharray: 10px; */
+}
+
+.backPath path {
+  opacity: 0;
+  stroke: #8ECCEC;
   stroke-dasharray: 10px;
-  animation: pathSlow 5s linear infinite;
+  stroke-dashoffset: 0px;
+  transition: opacity 0.2s 0.4s;
+  animation: pathSlow 3.2s linear infinite; 
+}
+
+.active .backPath path {
+  opacity: 1;
 }
 
 /* .summaryBackground:hover .backPath path {
@@ -180,19 +202,19 @@ body {
 }
 
 @keyframes pathSlow {
-  to {
-    stroke-dashoffset: -100px;
+  100% {
+    stroke-dashoffset: -20px;
   }
-}
-
-.active {
-  width: 100vw;
 }
 
 .summary {
   display: inline-block;
   width: 40%; 
   margin-top: 40px;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 1s, opacity 1s;
 }
 
 .summary h2 {
@@ -210,11 +232,15 @@ body {
   font-size: 24px;
 }
 
+.active .summary {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 /* MARK: Workshop Cards */
 
 .workshopCardsContainer {
   margin-top: 120px;
-  height: 100vh;
 }
 
 .workshopCardsContainer p {
@@ -287,8 +313,8 @@ body {
   fill: none;
   /* stroke: #a2cae9; */
   stroke-width: 2px;
-  stroke-dasharray: 10px;
-  animation: pathSlow 7s linear infinite;
+  stroke-dasharray: 3px;
+  /* animation: pathSlow 7s linear infinite; */
   transition: stroke-linecap 1s, stroke-width 1s;
 }
 
@@ -370,4 +396,74 @@ button:active, button:focus {
 .workshopCard button:hover {
   background-size: 100% 100%;
   cursor: pointer;
+}
+
+/* Workshop Review Row */
+.workshopReviewRow {
+  background-color: #F4F4F4;
+  width: 100%;
+  padding: 180px 0 100px;
+  z-index: -5;
+}
+
+.workshopReviewRow .background {
+  position: absolute;
+  background: #F4F4F4;
+  left: 0;
+  margin-top: -180px;
+  height: 100%;
+  width: 100%;
+  z-index: -5;
+}
+
+.reviewCard {
+  width: calc(33.3% - 40px);
+  display: inline-block;
+  background: white;
+  margin: 0px 30px;
+  padding: 60px;
+  z-index: -4;
+}
+
+.reviewCard img {
+  height: 220px;
+  width: 100%;
+  border-radius: 200px;
+  margin-top: -150px;
+  margin-bottom: 20px;
+  background: gray;
+}
+
+.reviewCard h1 {
+  font-size: 42px;
+  font-weight: bold;
+  color: #67DDAB;
+}
+
+.reviewCard h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.reviewCard p {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.reviewCard button {
+  background: white;
+  border: #67DDAB solid 4px;
+  color: #67DDAB;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 30px;
+  margin: auto;
+  width: 100%;
+}
+
+footer {
+  background: white;
+  width: 100%;
+  height: 200px;
 }

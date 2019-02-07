@@ -43,10 +43,11 @@ class App extends Component {
                 <button>Join Us</button>
               </div>
             </div>
-            <div className="summaryRow" ref={this.summaryRowRef}>
+          </div>
+            <div className={this.state.showSummaryRow} ref={this.summaryRowRef}>
               <div className="summaryBackground" style={{height: this.state.summaryRowHeight}}>
                 <SummaryLine />
-                <SummaryLine className="backPath"/>
+                <SummaryLine className="backPath" id="clipper"/>
               </div>
               <div className="summary">
                   <h2>here's the deal</h2>
@@ -89,8 +90,33 @@ class App extends Component {
               />
 
             </div>
+            <div className="workshopReviewRow">
+                <div className="background"></div>
+                <div className="reviewCard" style={{marginLeft: "0px"}}>
+                  <img></img>
+                  <h1>Inspiration Tour</h1>
+                  <h2>( 1 - 8 Hours )</h2>
+                  <p>Learn from the best, be the best. Inspire the Fire.</p>
+                  <button>Activate Fire</button>
+                </div>
+                <div className="reviewCard">
+                  <img></img>
+                  <h1>Inspiration Tour</h1>
+                  <h2>( 1 - 8 Hours )</h2>
+                  <p>Learn from the best, be the best. Inspire the Fire.</p>
+                  <button>Activate Fire</button>
+                </div>
+                <div className="reviewCard" style={{marginRight: "0px"}}>
+                  <img></img>
+                  <h1>Inspiration Tour</h1>
+                  <h2>( 1 - 8 Hours )</h2>
+                  <p>Learn from the best, be the best. Inspire the Fire.</p>
+                  <button>Activate Fire</button>
+                </div>
+
           </div>
         </div>
+        <footer></footer>
       </div>
     );
   }
