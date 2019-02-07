@@ -128,7 +128,7 @@ class Home extends Component {
   handleScroll(event) {
     var heightBound = window.height * 0.8
     // this.state.showSummaryRow = "active";
-    console.log(this.summaryRowRef.current.clientHeight)
+    // console.log(this.summaryRowRef.current.clientHeight)
     var summaryRowHeight = this.summaryRowRef.current.clientHeight + 60 + 40;
     this.setState({showSummaryRow: "summaryRow active", summaryRowHeight: summaryRowHeight + "px"})
     // console.log(event)

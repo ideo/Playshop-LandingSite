@@ -1,6 +1,108 @@
 .Contact {
-    background: red;
-    height: 400px;
-    width: 100px;
+    /* background: red; */
+    /* height: 400px; */
+    /* width: 100px; */
     position: relative;
+}
+
+.Contact h1 {
+    font-size: 72px;
+    font-weight: bold;
+}
+
+.tabContainer {
+    /* background: red; */
+    margin: 40px 0;
+}
+
+.tabContainer .buttonRow {
+    /* height: 80px; */
+}
+
+.buttonRow div {
+    background-color: white;
+    height: 100%;
+    margin: 0 30px;
+    width: calc(33.3% - 40px);
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 100px;
+    transition: background-color 0.2s;
+}
+
+.buttonRow img {
+    display:inline-block;
+    height: 40px;
+    width: 40px;
+    background: gray;
+    transform: translateY(-10%);
+}
+
+.buttonRow h2 {
+    display:inline-block;   
+    font-size: 18px;
+    margin: 0px;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.buttonRow div:hover {
+    background-color: #67DDAB;
+}
+
+.buttonRow div.chosen {
+    background-color: #67DDAB;
+    color: white;
+}
+
+
+/* ------------------------------------------- MARK: Form Styling  */
+
+.formContainer {
+    /* height: 80vh; */
+    /* background: red; */
+}
+
+.formContainer .summaryContainer, .formContainer .form {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    /* background: yellow; */
+}
+
+.summaryContainer p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.summaryContainer span {
+    color: #67DDAB;
+}
+
+.summaryContainer form {
+    height: 100%;
+    background: red;
+    position: absolute;
+    top: 0;
+}
+
+.form input {
+    width: 100%;
+    padding: 20px 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-bottom: #2F2F2F solid 1px;
+}
+
+::placeholder {
+    color: #D4D4D4;
+}
+
+.form .submitButton {
+    width: 300px;
+    background: #67DDAB;
+    color: white;
+    margin: 40px 0;
+    border: none;
 }
