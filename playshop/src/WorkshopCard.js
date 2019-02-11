@@ -26,6 +26,6 @@ class WorkshopCard extends Component {
             </div>
         );
     }
-}
+} 
 
 export default WorkshopCard;

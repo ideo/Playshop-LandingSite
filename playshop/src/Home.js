@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import logo from './assets/D4Play_logo.jpg';
 import inspirationTourBalloon from './assets/InspirationTourBalloon.png';
-import moon from './assets/moon.png';
+import handsOfInspiration from './assets/handsOfInspiration.png';
+import telescope from './assets/telescope.png';
 import { Link } from 'react-router-dom'
 import { ReactComponent as SummaryLine } from './assets/SummaryLine.svg';
 import { ReactComponent as InspirationLine } from './assets/InspirationLine.svg';
@@ -9,13 +10,17 @@ import { ReactComponent as WorkshopLine } from './assets/WorkshopLine.svg';
 import { ReactComponent as PopUpLine } from './assets/PopUpLine.svg';
 import './App.css';
 import WorkshopCard from './WorkshopCard.js';
+import Contact from './Contact.js';
+import esrbCert from './assets/privacy_certified_global_color.png';
+
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.summaryRowRef = React.createRef();
+    this.emailContainerRef = React.createRef();
     // this.state.showSummaryRow = "summaryRow";
-    this.state = {showSummaryRow: "summaryRow", summaryRowHeight: "100%"}
+    this.state = {showSummaryRow: "summaryRow", summaryRowHeight: "100%", emailContainerHeight: "100%"}
     // this.workshops 
   }
   componentDidMount() {
@@ -59,67 +64,70 @@ class Home extends Component {
               </div>
             </div>
             <div className="workshopCardsContainer">
-              <p>We offer 3 types of <br/>Play Lab Workshops:</p>
+              <img src={telescope} />
+              <h1>We will create a conducive environment for collaborative ideation through playful methods that encourage creative confidence and thinking out of the box, in order to push ideas beyond what has previously been imagined.</h1>
+              
+              <div className="qualityCardsContainer">
+              <h2>In the course of this interactive experience, participants will:</h2>
 
-              <WorkshopCard 
-                  title="inspirationTour" 
-                  image = {inspirationTourBalloon}
-                  backgroundLine = {<InspirationLine />}
-                  textSide="left" 
-                  color="#67DDAB"
-                  durationText="1 - 8 Hours"
-                  headerText={<h1>Need a <span>boost</span> of energy, momentum, creativity, or innovation? <br />Let's go on <span>an <br/>Inspiration Tour.</span></h1>}
-                  idealForText="Teams looking to broaden their perspective, gain insights from innovation in adjacent industries, and rinse out stress with laughter and delight."
-              />
-              <WorkshopCard 
-                  title="playWorkshop" 
-                  image = {moon}
-                  backgroundLine = {<WorkshopLine />}
-                  textSide="right" 
-                  color="#FF9C1C"
-                  durationText="2 - 8 Hours"
-                  headerText={<h1>Our <span>Play Workshops</span> are interactive, action-oriented, and filled with laughter.</h1>}
-                  idealForText="Teams looking for a memorable high-energy experience that can take place in one room as a stand alone event or as a portion of a larger program."
-              />
-              <WorkshopCard 
-                  title="popUp" 
-                  image = {inspirationTourBalloon}
-                  backgroundLine = {<PopUpLine />}
-                  textSide="left" 
-                  color="#8ECCEC"
-                  durationText="1 Day - 2 Weeks"
-                  headerText={<h1>Our <span>Play Workshops</span> are interactive, action-oriented, and filled with laughter.</h1>}
-                  idealForText="Teams that want to move quickly from ideas to tangilble prototypes by leverageing the science of play."
-              />
+                <div className="qualityCard">
+                  <img src={handsOfInspiration} />
+                  <h3>1. Get Inspired</h3>
+                  <p>Be introduced to analogous inspiration that exposes them to experiences that go beyond your industry to help jump-start fresh ideas</p>
+                </div>
 
+                <div className="qualityCard">
+                  <img src={handsOfInspiration} />
+                  <h3>2. Set Focus</h3>
+                  <p>Identify rich opportunity areas to brainstorm.</p>
+                </div>
+
+                <div className="qualityCard">
+                  <img src={handsOfInspiration} />
+                  <h3>3. Gather Tools</h3>
+                  <p>Master the rules of successful brainstorming and participate in activities to boost their  Creative Confidence</p>
+                </div>
+                <div className="spacer"></div>
+                <div className="qualityCard">
+                  <img src={handsOfInspiration} />
+                  <h3>4. Create</h3>
+                  <p>Brainstorm new concepts</p>
+                </div>
+
+                <div className="qualityCard">
+                  <img src={handsOfInspiration} />
+                  <h3>5. Share</h3>
+                  <p>Prototype and share back these concepts at varying levels of fidelity</p>
+                </div>
+              </div>
+
+              <div className="contactContainer">
+                <h1>In addition to early concepts, participants walk away with a clear and actionable process for future innovation, with an emphasis on creating a low-stakes environments for creativity and play.</h1>
+                <Contact></Contact>
+              </div>
+
+              <div className="emailContainer" ref={this.emailContainerRef}>
+                <div className="background" style={{height: this.state.emailContainerHeight}}></div>
+                <h1>We also do other sessions, such as inspiration tours, pop-ups, projects, & more.
+                  <br/>
+                  <br/>
+                  Reach out to us at:<br/>
+                  <a>play@ideo.com</a>
+                </h1>
+              </div>
             </div>
-            <div className="workshopReviewRow">
-                <div className="background"></div>
-                <div className="reviewCard" style={{marginLeft: "0px"}}>
-                  <img></img>
-                  <h1 style={{color: "#67DDAB"}}>Inspiration Tour</h1>
-                  <h2>( 1 - 8 Hours )</h2>
-                  <p>Learn from the best, be the best. Inspire the Fire.</p>
-                  <button style={{color: "#67DDAB", borderColor: "#67DDAB"}}>Activate Fire</button>
-                </div>
-                <div className="reviewCard">
-                  <img></img>
-                  <h1 style={{color: "#FF9C1C"}}>Play Shop Shop</h1>
-                  <h2>( 2 - 8 Hours )</h2>
-                  <p>Learn from the best, be the best. Inspire the Fire.</p>
-                  <button style={{color: "#FF9C1C", borderColor: "#FF9C1C"}}>Activate Fire</button>
-                </div>
-                <div className="reviewCard" style={{marginRight: "0px"}}>
-                  <img></img>
-                  <h1 style={{color: "#8eccec"}}>Pop Up Session</h1>
-                  <h2>( 1 Day - 2 Weeks )</h2>
-                  <p>Learn from the best, be the best. Inspire the Fire.</p>
-                  <button style={{color: "#8eccec", borderColor: "#8eccec"}}>Activate Fire</button>
-                </div>
-
-          </div>
         </div>
-        <footer></footer>
+        <footer>
+        <div className="links">
+                        <p>Visit IDEO.com</p>
+                        <p>View our Web Privacy Policy</p>
+                        <p>View our Mobile Privacy Policy</p>
+                        <p>ⓒ IDEO PLAY LAB, 2019. All Rights Reserved</p>
+                    </div>
+                    <div className="certification">
+                        <img src={esrbCert}></img>
+                    </div>
+        </footer>
       </div>
     );
   }
@@ -127,16 +135,9 @@ class Home extends Component {
 
   handleScroll(event) {
     var heightBound = window.height * 0.8
-    // this.state.showSummaryRow = "active";
-    // console.log(this.summaryRowRef.current.clientHeight)
-    var summaryRowHeight = this.summaryRowRef.current.clientHeight + 60 + 40;
-    this.setState({showSummaryRow: "summaryRow active", summaryRowHeight: summaryRowHeight + "px"})
-    // console.log(event)
-    // console.log(this.summaryRef.current)
-    // const node = this.summaryRef.current;
-    // node.style.animation = {animation: "fillLeft 1s ease"}
-    // this.summaryRef.setState({animation: 'fillLeft 1s ease'});
-    
+    var summaryRowHeight = this.summaryRowRef.current.clientHeight + 100 + 100;
+    var emailContainerHeight = this.emailContainerRef.current.clientHeight;
+    this.setState({showSummaryRow: "summaryRow active", summaryRowHeight: summaryRowHeight + "px", emailContainerHeight: emailContainerHeight + "px"})
   }
 }
 
