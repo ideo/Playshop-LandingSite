@@ -1,6 +1,11 @@
 /* MARK: Header */
 body {
   font-family: 'Gotham';
+  overflow-x: hidden;
+}
+
+.col6 {
+  width: 50%;
 }
 
 .App-header {
@@ -66,14 +71,11 @@ body {
 /* MARK: Hero */
 
 .heroRow {
-  height: auto;
-  /* height: 90vh; */
   height: 560px; 
 }
 
 .heroRow .videoContainer {
   height: 100%;
-  width: 50%;
   background-color: green;
   display: inline-block;
   /* float: left; */
@@ -86,11 +88,10 @@ body {
 .heroRow .heroTextContainer {
   display: inline-block;
   height: 100%;
-  width: 50%;
   float: right;
 }
 
-.heroTextContainer .heroText {
+.heroText {
   display: block;
   position: relative;
   margin: 0px 10% 50px 50px;
@@ -499,6 +500,10 @@ button:active, button:focus {
   width: 100%;
 }
 
+.contactContainer {
+  margin-bottom: 70px;
+}
+
 footer {
   background: white;
   max-width: 1140px;
@@ -518,4 +523,38 @@ footer .certification {
 footer img {
   float: right;
   height: 100%;
+}
+
+@media only screen and (max-width: 1440px) {
+  .App-header {
+      max-width: 100%;
+      height: 20px;
+  }
+
+  .App-container {
+    max-width: 100%;
+    margin-top: 10px;
+  }
+
+  .heroRow {
+    height: 300px;
+  }
+
+  .col6 {
+    width: 100%;
+  }
+
+  .heroText {
+    top: 30px;
+    margin: 0 50px;
+    transform: none;
+  }
+
+  .heroText h1 {
+    font-size: 48px;
+  }
+
+  .heroText p {
+    font-size: 24px;
+  }
 }

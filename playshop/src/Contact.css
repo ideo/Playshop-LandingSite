@@ -109,6 +109,7 @@
     font-weight: bold;
     border: none;
     border-bottom: #2F2F2F solid 1px;
+    transition: color 0.4s, background-color 0.4s, width 0.8s;
 }
 
 ::placeholder {
@@ -118,8 +119,96 @@
 .form .submitButton {
     width: 300px;
     background: #67DDAB;
-    color: white;
+    color: #070707;
     margin: 40px auto;
+    padding: 20px 0;
     border: none;
+    outline: none;
     display: block;
+}
+
+.Contact.pending .form .submitButton {
+    color: white;
+    animation: submitting 1s infinite;
+}
+
+@keyframes submitting {
+    0% {
+        background: #070707;
+    }
+    25% {
+        background: #67DDAB;
+    }
+    50% {
+        background: #8eccec;
+    }
+    75% {
+        background: #e1942f;
+    }
+    100% {
+        background: #070707;
+    }
+}
+
+.form .submitButton:hover {
+    color: white;
+    background: #070707;
+}
+
+.Contact .formContainer {
+    height: 100%;
+    transition: display 1s 2s, height 1s 1s;
+}
+
+.sentContainer {
+    width: 100%;
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    transition: visibility 0s 0.8s, opacity 1s 0.8s;
+}
+
+.Contact img {
+    transform: translateY(200px) scale(0.3);
+    transition: transform 0.6s 0.8s;
+}
+
+.Contact.submitted .sentContainer {
+    /* display: block; */
+    visibility: visible;
+    opacity: 1;
+}
+
+.Contact.submitted .formContainer {
+    /* display: none; */
+}
+
+.Contact.submitted input {
+    width: 0%;
+}
+
+.Contact.submitted img {
+    transform: translateY(0) scale(1);
+}
+
+.Contact.submitted h1 {
+    transform: translateY(0) scale(1);
+}
+
+@keyframes appearSent {
+    to {
+        visibility: visible;
+    }
+}
+
+.sentContainer img {
+    margin-top: 0;
+    height: 300px;
+}
+
+.sentContainer h1 {
+    /* font-family: serif; */
+    font-size: 24px;
+    transform: translateY(-100px) scale(0.8);
+    transition: transform 0.6s 0.8s;
 }

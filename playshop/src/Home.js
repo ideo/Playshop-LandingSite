@@ -39,10 +39,10 @@ class Home extends Component {
         </header>
         <div className="App-container"> 
           <div className="heroRow">
-            <div className="videoContainer">
+            <div className="videoContainer col6">
               <div className="video"></div>
             </div>
-            <div className="heroTextContainer">
+            <div className="heroTextContainer col6">
               <div className="heroText">
                 <h1>Make with Us in Playshops</h1>
                 <p>Generate new concepts, build innovative culture, and learn new design tools with IDEO's Play Lab</p>
