@@ -15,7 +15,7 @@ class Contact extends Component {
       }
       handleSubmit(event){
         var data = new FormData(event.target);
-        this.setState({contactClasses: "Contact pending"})
+        this.setState({contactClasses: "Contact submitted"})
         // console.log(data.keys);
         var newData = {
             NAME: data.get("NAME"),
@@ -52,6 +52,7 @@ class Contact extends Component {
             this.setState({contactClasses: "Contact submitted"})
         })
         .catch(error => {
+            this.setState({contactClasses: "Contact"})
             console.log(error);
         })
       }

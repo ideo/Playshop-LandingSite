@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './assets/D4Play_logo.jpg';
 import inspirationTourBalloon from './assets/InspirationTourBalloon.png';
 import handsOfInspiration from './assets/handsOfInspiration.png';
-import telescope from './assets/telescope.png';
+import telescope from './assets/tele@3x.png';
 import { Link } from 'react-router-dom'
 import { ReactComponent as SummaryLine } from './assets/SummaryLine.svg';
 import { ReactComponent as InspirationLine } from './assets/InspirationLine.svg';
@@ -64,11 +64,19 @@ class Home extends Component {
               </div>
             </div>
             <div className="workshopCardsContainer">
-              <img src={telescope} />
+              <div className="summaryBackground inspiration" style={{height: this.state.summaryRowHeight}}>
+                <InspirationLine />
+                <InspirationLine className="backPath"/>
+              </div>
+              <img src={telescope} className="telescope" />
               <h1>We will create a conducive environment for collaborative ideation through playful methods that encourage creative confidence and thinking out of the box, in order to push ideas beyond what has previously been imagined.</h1>
-              
+
               <div className="qualityCardsContainer">
               <h2>In the course of this interactive experience, participants will:</h2>
+                <div className="summaryBackground workshop" style={{height: this.state.summaryRowHeight}}>
+                  <WorkshopLine />
+                  <WorkshopLine className="backPath"/>
+                </div>
 
                 <div className="qualityCard">
                   <img src={handsOfInspiration} />
@@ -99,10 +107,15 @@ class Home extends Component {
                   <h3>5. Share</h3>
                   <p>Prototype and share back these concepts at varying levels of fidelity</p>
                 </div>
+
               </div>
 
               <div className="contactContainer">
                 <h1>In addition to early concepts, participants walk away with a clear and actionable process for future innovation, with an emphasis on creating a low-stakes environments for creativity and play.</h1>
+                <div className="summaryBackground popUp" style={{height: this.state.summaryRowHeight}}>
+                  <PopUpLine />
+                  <PopUpLine className="backPath"/>
+                </div>
                 <Contact></Contact>
               </div>
 
