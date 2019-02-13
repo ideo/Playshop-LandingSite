@@ -81,8 +81,24 @@ body {
   /* float: left; */
 }
 
+.videoContainer {
+  overflow: hidden;
+  width: calc(50% + (100vw - 1140px)/2);
+  margin-left: calc((-100vw + 1140px)/2);
+  /* transform: translateX(-50%) */
+  /* width: 100%; */
+}
+
 .videoContainer .video {
 
+}
+
+.video img {
+  clip-path: url(#heroClip);
+  min-width: 100%;
+  min-height: 100%;
+  transform: scaleX(-1);
+  /* width: 100%; */
 }
 
 .heroRow .heroTextContainer {
@@ -564,7 +580,7 @@ footer img {
   height: 100%;
 }
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1140px) {
   .App-header {
       max-width: 100%;
       height: 20px;
@@ -581,6 +597,14 @@ footer img {
 
   .col6 {
     width: 100%;
+  }
+
+  .videoContainer {
+    /* overflow: hidden; */
+    /* width: calc(50% + (100vw - 1140px)/2); */
+    /* margin-left: calc((-100vw + 1140px)/2); */
+    /* transform: translateX(-50%) */
+    margin-left: 0;
   }
 
   .heroText {

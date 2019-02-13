@@ -8,6 +8,7 @@ import { ReactComponent as SummaryLine } from './assets/SummaryLine.svg';
 import { ReactComponent as InspirationLine } from './assets/InspirationLine.svg';
 import { ReactComponent as WorkshopLine } from './assets/WorkshopLine.svg';
 import { ReactComponent as PopUpLine } from './assets/PopUpLine.svg';
+import playLab from './assets/toy-lab-brainstorm.jpg'
 import './App.css';
 import WorkshopCard from './WorkshopCard.js';
 import Contact from './Contact.js';
@@ -39,8 +40,10 @@ class Home extends Component {
         </header>
         <div className="App-container"> 
           <div className="heroRow">
-            <div className="videoContainer col6">
-              <div className="video"></div>
+            <div className="videoContainer col6" id="heroClip">
+              <div className="video">
+                <img src={playLab} />
+              </div>
             </div>
             <div className="heroTextContainer col6">
               <div className="heroText">
