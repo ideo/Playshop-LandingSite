@@ -5,6 +5,7 @@ body {
 }
 
 .col6 {
+  display: inline-block;
   width: 50%;
 }
 
@@ -65,13 +66,13 @@ body {
   /* background: blue; */
   max-width: 1140px;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 /* MARK: Hero */
 
 .heroRow {
-  height: 560px; 
+  height: 600px; 
 }
 
 .heroRow .videoContainer {
@@ -112,7 +113,7 @@ body {
   position: relative;
   margin: 0px 10% 50px 50px;
   top: 40%;
-  transform: translateY(-50%);
+  transform: translateY(-48%);
 }
 
 .heroText h1 {
@@ -121,6 +122,7 @@ body {
 }
 
 .heroText p {
+  /* margin-top: 60px; */
   font-size: 36px;
   line-height: 1.22;
 }
@@ -135,19 +137,22 @@ body {
   background-color: #67DDAB;
 }
 
-.telescope {
-  animation: flip 10s infinite;
-}
-
-.telescope:hover {
-  transform: scale(-1, 1);
-}
-
 /* MARK: Summary Row */
 .summaryRow {
   width: 100%;
   height: auto;
   transition: width 1s ease;
+}
+
+.postIts {
+  vertical-align: top;
+  width: 60%;
+  padding: 80px 0 0px 80px;
+  /* transform: translateY(-30%); */
+}
+
+.summaryRow img {
+  width: 100%;
 }
 
 .summaryBackground {
@@ -209,7 +214,7 @@ body {
   z-index: -5;
   margin-left: 0;
   width: 104%;
-  margin-top: -20%;
+  margin-top: 0%;
 }
 
 .workshop svg {
@@ -261,8 +266,9 @@ body {
 .summary {
   display: inline-block;
   width: 40%; 
-  margin-top: 100px;
+  margin-top: 15%;
   opacity: 0;
+  /* margin-top: 50%; */
   transform: translateY(20px);
   transition: transform 1s, opacity 1s;
 }
@@ -279,6 +285,7 @@ body {
 }
 
 .summary p {
+  margin-top: 30px;
   font-size: 24px;
 }
 
@@ -288,20 +295,48 @@ body {
 }
 
 /* MARK: Workshop Cards */
+.lightbulbAnimation {
+  width: 600px;
+  display: block;
+  margin: auto;
+  transform: translateX(0px);
+  overflow: hidden;
+  padding-top: 240px;
+  margin-top: -200px;
+}
+
+@keyframes spriteSheet-6frame {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(calc(-605.1px*6));
+  }
+}
+
+.lightbulbAnimation img:hover {
+  animation: spriteSheet-6frame 0.5s steps(6);
+}
+
+.lightbulbAnimation img {
+  height: 100%;
+  /* margin-left: -100px; */
+  /* transform: translateX(-605px); */
+}
 
 .workshopCardsContainer {
-  margin-top: 120px;
+  margin-top: 0px;
 }
 
 .workshopCardsContainer img {
   margin: auto;
   display: block;
-  height: 360px;
+  height: 600px;
   margin-top: -180px;
 }
 
 .workshopCardsContainer h1 {
-  margin: 70px 20px 100px;
+  margin: -120px 20px 100px;
   text-align: center;
   font-size: 48px;
   font-weight: bold;
