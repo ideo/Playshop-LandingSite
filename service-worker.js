@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Playshop-LandingSite/precache-manifest.2a67ee43de20cfd6106bf1fdcc87f711.js"
+  "/Playshop-LandingSite/precache-manifest.fdd3d43447a935be77a97682d7e160c9.js"
 );
 
 workbox.clientsClaim();
