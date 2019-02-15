@@ -1,4 +1,13 @@
 @media only screen and (max-width: 1140px) {
+    ::-webkit-scrollbar {
+        width: 0px;  /* remove scrollbar space */
+        background: transparent;  /* optional: just make scrollbar invisible */
+    }
+    /* optional: show position indicator in red */
+    ::-webkit-scrollbar-thumb {
+        /* background: #FF0000; */
+    }
+
     .App-header {
         max-width: 100%;
         height: 70px;
@@ -19,8 +28,44 @@
         margin-right: 14px;
     }
 
+    .menuContainer button:focus{
+        border: none;
+        opacity: 1;
+        outline: none;
+    }
+
     .mobileMenu {
         display: block;
+        /* height: 24px;
+        width: 24px;
+        background: red;
+        padding: 0; */
+    }
+
+    .mobileMenu div {
+        /* background: red;
+        width: 100%;
+        height: 6px; */
+        /* height: 2px; */
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menuLevel-1 .hamburger {
+        display: none;
+    }
+
+    .cross {
+        display: none;
+        transform: rotate(180deg);
+        transition: transform 1s;
+    }
+
+    .menuLevel-1 .cross {
+        display: block;
+        transform: rotate(45deg);
     }
 
     ul {
@@ -32,6 +77,8 @@
         width: 80vw;
         height: 100vh;
         padding: 24px 30px;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
 
     .menuContainer li {
@@ -69,14 +116,24 @@
         font-size: 20px;
     }
 
-    .App-container, .App-header {
+    .App, .App-container, .App-header {
         transition: transform 200ms cubic-bezier(0.145, 0.555, 0.375, 1.125);
         /* transform: translateX(-70%); */
         /* transform: translateX(-160%); */
     }
 
     .menuLevel-1 {
+        /* transform: translateX(-70%); */
+        /* position: absolute; */
+    }
+
+    .menuLevelAll-1 {
         transform: translateX(-70%);
+        position: fixed;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 0;
     }
 
     .menuLevel-2 {
@@ -123,6 +180,113 @@
     }
     
     .App {
-        overflow: hidden;
+        /* overflow: hidden; */
+    }
+
+    .heroText {
+        top: 30px;
+        margin: 0 20px;
+        transform: none;
+    }
+    
+    .heroText h1 {
+        font-size: 48px;
+    }
+    
+    .heroText p {
+        font-size: 24px;
+    }
+
+    .heroRow .videoContainer {
+        height: auto;
+    }
+
+    .video img {
+        width: 100%;
+    }
+
+    .summaryBackground {
+        background: none;
+    }
+
+    .summaryBackground svg {
+        width: 340%;
+        margin-top: -30px;
+        margin-left: -30px;
+    }
+
+    .summary {
+        background: #8ECCEC;
+        margin-top: 140px;
+        width: 100%;
+        opacity: 1;
+        padding: 60px 20px 80px;
+    }
+
+    .postIts {
+        display: none;
+    }
+
+    .workshopCardsContainer h1 {
+        font-size: 24px;
+        text-align: left;
+    }
+
+    .lightbulbAnimation {
+        transform: scale(0.8) rotate(-40deg);
+        margin: 0;
+        position: absolute;
+        margin-top: -400px;
+    }
+
+    .qualityCardsContainer {
+        margin: 0 20px;
+    }
+    
+    .qualityCard {
+        width: 100%;
+    }
+
+    .workshopCardsContainer h2 {
+        text-align: left;
+    }
+
+    .qualityCardsContainer img {
+        height: 200px;
+        padding: 10px 0 10px;
+    }
+
+    .qualityCardsContainer h3 {
+        font-size: 24px;
+        text-align: center;
+        margin: 20px 0 10px;
+    }
+
+    .inspiration svg {
+        width: 240%;
+        margin-left: -400px;
+        margin-top: 700px;
+    }
+
+    .workshop svg {
+        width: 240%;
+        margin-top: -380px;
+        margin-left: -100px;
+    }
+
+    .workshopCardsContainer h1 {
+        margin: 60px 20px;
+    }
+
+    .popUp svg {
+        width: 120%;
+    }
+
+    .formContainer .form {
+        padding: 0 20px;
+    }
+
+    .emailContainer h1 {
+        margin: 0 20px;
     }
 }

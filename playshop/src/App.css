@@ -587,18 +587,4 @@ footer img {
     /* transform: translateX(-50%) */
     margin-left: 0;
   }
-
-  .heroText {
-    top: 30px;
-    margin: 0 50px;
-    transform: none;
-  }
-
-  .heroText h1 {
-    font-size: 48px;
-  }
-
-  .heroText p {
-    font-size: 24px;
-  }
 }

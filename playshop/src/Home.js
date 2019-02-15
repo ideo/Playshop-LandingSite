@@ -59,7 +59,7 @@ class Home extends Component {
   }
   render() {
     return (
-      <div className="App" onScroll={this.handleScroll}>
+      <div className={"App menuLevelAll-" + this.state.menuLevel}onScroll={this.handleScroll}>
         
         <header className={"App-header menuLevel-" + this.state.menuLevel}>
             <div className="logoContainer">
@@ -67,8 +67,12 @@ class Home extends Component {
             </div>
             <div className="menuContainer">
                 <button className="mobileMenu" onClick={this.onClickMenu.bind(this)}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>
-                </button>
+                    {/* <div />
+                    <div />
+                    <div /> */}
+
+                    <svg className="hamburger" height="32px" id="Layer_1" version="1.1" viewBox="0 0 32 32" width="32px"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
+                    <svg className="cross" height="32px" id="Layer_1" version="1.1" viewBox="0 0 32 32" width="32px"><path d="M28,14H18V4c0-1.104-0.896-2-2-2s-2,0.896-2,2v10H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h10v10c0,1.104,0.896,2,2,2  s2-0.896,2-2V18h10c1.104,0,2-0.896,2-2S29.104,14,28,14z"/></svg>                </button>
                 <ul>
                     <li>
                         <button className="dropdownParent" onClick={this.onClickSubmenu.bind(this, 1)} id="item-1">Our Apps</button>
@@ -240,9 +244,11 @@ class Home extends Component {
 
   handleScroll(event) {
     var heightBound = window.height * 0.8
-    var summaryRowHeight = this.summaryRowRef.current.clientHeight + 100 + 100;
-    var emailContainerHeight = this.emailContainerRef.current.clientHeight;
-    this.setState({showSummaryRow: "summaryRow active", summaryRowHeight: summaryRowHeight + "px", emailContainerHeight: emailContainerHeight + "px"})
+    if(this != null) {
+      var summaryRowHeight = this.summaryRowRef.current.clientHeight + 100 + 100;
+      var emailContainerHeight = this.emailContainerRef.current.clientHeight;
+      this.setState({showSummaryRow: "summaryRow active", summaryRowHeight: summaryRowHeight + "px", emailContainerHeight: emailContainerHeight + "px"})
+    }
   }
 }
 
