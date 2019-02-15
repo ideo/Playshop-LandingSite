@@ -548,7 +548,18 @@ button:active, button:focus {
 footer {
   background: white;
   max-width: 1140px;
+  margin: 40px auto;
   /* height: 200px; */
+}
+
+footer a {
+  color: #070707;
+}
+
+footer a:hover {
+  color: #909090;
+  opacity: 0.3;
+  text-decoration: none;
 }
 
 footer div {

@@ -13,7 +13,7 @@ import './App.css';
 import WorkshopCard from './WorkshopCard.js';
 import Contact from './Contact.js';
 import Header from './Header.js';
-import esrbCert from './assets/privacy_certified_global_color.png';
+import esrbCert from './assets/ESRBbadge.jpg';
 import logo from './assets/D4Play_logo.jpg';
 import './Header.css'
 import './Mobile.css'
@@ -228,13 +228,21 @@ class Home extends Component {
         </div>
         <footer>
         <div className="links">
-                        <p>Visit IDEO.com</p>
-                        <p>View our Web Privacy Policy</p>
-                        <p>View our Mobile Privacy Policy</p>
+                        <a href="http://www.ideo.com">
+                          <p>Visit IDEO.com</p>
+                        </a>
+                        <a href="http://www.ideotoylab.com/webprivacy">
+                          <p>View our Web Privacy Policy</p>
+                        </a>
+                        <a href="http://www.ideotoylab.com/mobileprivacypolicy">
+                          <p>View our Mobile Privacy Policy</p>
+                        </a>
                         <p>ⓒ IDEO PLAY LAB, 2019. All Rights Reserved</p>
                     </div>
                     <div className="certification">
-                        <img src={esrbCert}></img>
+                        <a href="http://www.esrb.org/confirm/ideo-confirmation.aspx">
+                          <img src={esrbCert}></img>
+                        </a>
                     </div>
         </footer>
       </div>

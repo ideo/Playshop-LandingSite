@@ -289,4 +289,18 @@
     .emailContainer h1 {
         margin: 0 20px;
     }
+
+    footer {
+        width: 100%;
+        text-align: center;
+    }
+
+    footer div {
+        display: block;
+        width: 100%;
+    }
+
+    footer img {
+        float: none;
+    }
 }
