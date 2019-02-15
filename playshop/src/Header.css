@@ -34,6 +34,12 @@
     margin: auto;
     padding: auto;
     font-weight: bold;
+    outline: none;
+}
+
+.menuContainer .dropdownParent:focus {
+    color: gray;
+    opacity: 1;
 }
 
 .menuContainer li {
@@ -47,6 +53,15 @@
     padding: 6.5px 0;
     border: 1px solid #f2f2f2;
     z-index: 2;
+}
+
+.hoverMenu a:focus, .hoverMenu button:focus {
+    outline: none;
+}
+
+.hoverMenu a:hover {
+    text-decoration: none;
+    cursor: pointer !important;
 }
 
 .hoverMenu button {

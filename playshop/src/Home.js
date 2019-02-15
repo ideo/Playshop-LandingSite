@@ -83,11 +83,11 @@ class Home extends Component {
                     <li>
                         <button className="dropdownParent" onClick={this.onClickSubmenu.bind(this, 1)} id="item-1">Our Apps</button>
                         <div className="hoverMenu">
-                            <button>Spin and Spot Safari</button>
-                            <button>Monster Moves</button>
-                            <button>Balloonimals</button>
-                            <button>Balloonimals Babies</button>
-                            <button>Magic Creature Creator</button>
+                            <a target="_blank" href="http://www.ideotoylab.com/spin-and-spot-safari/"><button>Spin and Spot Safari</button></a>
+                            <a target="_blank" href="http://www.ideotoylab.com/spin-and-spot-safari/"><button>Monster Moves</button></a>
+                            <a target="_blank" href="http://www.ideotoylab.com/balloonimals/"><button>Balloonimals</button></a>
+                            <a target="_blank" href="http://www.ideotoylab.com/balloonimalbabies/"><button>Balloonimals Babies</button></a>
+                            <a target="_blank" href="http://www.ideotoylab.com/magiccreaturecreator/"><button>Magic Creature Creator</button></a>
                         </div>
                     </li>
                         <span> / </span>
@@ -100,10 +100,10 @@ class Home extends Component {
                             </button>
                             <p>Sesame Street</p>
                         </div> */}
-                        <button>Elmo Calls</button>
-                        <button>Cookie Calls</button>
-                        <button>Elmo's Monster Maker</button>
-                        <button>Sesame Street Video Maker</button>
+                        <a target="_blank" href="http://www.ideotoylab.com/elmocalls/"><button>Elmo Calls</button></a>
+                        <a target="_blank" href="http://www.ideotoylab.com/cookiecalls/"><button>Cookie Calls</button></a>
+                        <a target="_blank" href="http://www.ideotoylab.com/elmosmonstermaker"><button>Elmo's Monster Maker</button></a>
+                        <a target="_blank" href="http://www.ideotoylab.com/sesamestreetvideomaker"><button>Sesame Street Video Maker</button></a>
                         </div>
                     </li>
                         <span> / </span>
@@ -116,12 +116,12 @@ class Home extends Component {
                                 </button>
                                 <p>Fisher-Price</p>
                             </div> */}
-                            <button>See 'n Say</button>
+                            <a target="_blank" href="http://www.ideotoylab.com/seensay"><button>See 'n Say</button></a>
                         </div>
                     </li>
                         <span> / </span>
                     <li style={{transitionDelay: "0.3s"}}>
-                        <button className="dropdownParent" onClick={this.onClickSubmenu.bind(this, 4)} id="item-4">Support</button>
+                        <a target="_blank" href="http://www.ideotoylab.com/support"><button className="dropdownParent" onClick={this.onClickSubmenu.bind(this, 4)} id="item-4">Support</button></a>
                     </li>
                 </ul>
             </div>
