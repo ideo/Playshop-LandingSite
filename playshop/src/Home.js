@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './assets/D4Play_logo.jpg';
 import inspirationTourBalloon from './assets/InspirationTourBalloon.png';
 import handsOfInspiration from './assets/handsOfInspiration.png';
 import telescope from './LightbulbAnimation/LightBulb-Strip.png';
@@ -13,17 +12,18 @@ import postIts from './assets/post-its.png'
 import './App.css';
 import WorkshopCard from './WorkshopCard.js';
 import Contact from './Contact.js';
+import Header from './Header.js';
 import esrbCert from './assets/privacy_certified_global_color.png';
-
+import logo from './assets/D4Play_logo.jpg';
+import './Header.css'
+import './Mobile.css'
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.summaryRowRef = React.createRef();
     this.emailContainerRef = React.createRef();
-    // this.state.showSummaryRow = "summaryRow";
-    this.state = {showSummaryRow: "summaryRow", summaryRowHeight: "100%", emailContainerHeight: "100%"}
-    // this.workshops 
+    this.state = {showSummaryRow: "summaryRow", summaryRowHeight: "100%", emailContainerHeight: "100%", menuLevel: 0}
   }
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll.bind(this));
@@ -39,18 +39,85 @@ class Home extends Component {
     // }, 1000);
     // this.setState({bulbAnimation: {animation: "animation: none"}})
   }
+  onClickMenu(e){
+    // console.log(e);
+    let newElement = document.getElementsByClassName("App-container");
+    document.getElementsByClassName("App-container").className = "App-container menuLevel-1";
+    // document.getElementsByClassName("App-container").classList.add('menuLevel-1');
+    newElement.className = "App-container menuLevel-1"
+    if(this.state.menuLevel != 1) {
+      this.setState({menuLevel: 1});
+    } else {
+      this.setState({menuLevel: 0});
+    }
+    console.log(document.getElementsByClassName("App-container"));
+  }
+  onClickSubmenu(e, id){
+    console.log(e);
+    console.log(id);
+    this.setState({menuLevel: 2});
+  }
   render() {
     return (
       <div className="App" onScroll={this.handleScroll}>
-        <header className="App-header">
-          <div className="logoContainer">
-            <img src={logo} />
-          </div>
-          <div className="menuContainer">
-            <p>OUR APPS / SESAME STREET / FISHER-PRICE / SUPPORT</p>
-          </div>
-        </header>
-        <div className="App-container"> 
+        
+        <header className={"App-header menuLevel-" + this.state.menuLevel}>
+            <div className="logoContainer">
+                <img src={logo} />
+            </div>
+            <div className="menuContainer">
+                <button className="mobileMenu" onClick={this.onClickMenu.bind(this)}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>
+                </button>
+                <ul>
+                    <li>
+                        <button className="dropdownParent" onClick={this.onClickSubmenu.bind(this, 1)} id="item-1">Our Apps</button>
+                        <div className="hoverMenu">
+                            <button>Spin and Spot Safari</button>
+                            <button>Monster Moves</button>
+                            <button>Balloonimals</button>
+                            <button>Balloonimals Babies</button>
+                            <button>Magic Creature Creator</button>
+                        </div>
+                    </li>
+                        <span> / </span>
+                    <li style={{transitionDelay: "0.1s"}}>
+                        <button className="dropdownParent" onClick={this.onClickSubmenu.bind(this, 2)} id="item-2">Sesame Street</button>
+                        <div className="hoverMenu">
+                        {/* <div className="mobile mobileTitle">
+                            <button className="back-chevron">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>
+                            </button>
+                            <p>Sesame Street</p>
+                        </div> */}
+                        <button>Elmo Calls</button>
+                        <button>Cookie Calls</button>
+                        <button>Elmo's Monster Maker</button>
+                        <button>Sesame Street Video Maker</button>
+                        </div>
+                    </li>
+                        <span> / </span>
+                    <li style={{transitionDelay: "0.2s"}}>
+                        <button className="dropdownParent" onClick={this.onClickSubmenu.bind(this, 3)} id="item-3">Fisher-Price</button>
+                        <div className="hoverMenu">
+                            {/* <div className="mobile mobileTitle">
+                                <button className="back-chevron">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>
+                                </button>
+                                <p>Fisher-Price</p>
+                            </div> */}
+                            <button>See 'n Say</button>
+                        </div>
+                    </li>
+                        <span> / </span>
+                    <li style={{transitionDelay: "0.3s"}}>
+                        <button className="dropdownParent" onClick={this.onClickSubmenu.bind(this, 4)} id="item-4">Support</button>
+                    </li>
+                </ul>
+            </div>
+          </header>
+
+        <div className={"App-container menuLevel-" + this.state.menuLevel}> 
           <div className="heroRow">
             <div className="videoContainer col6" id="heroClip">
               <div className="video">
@@ -115,10 +182,10 @@ class Home extends Component {
                   <h3>3. Learn New Tools</h3>
                   <p>Activiely engage in activities that introduce Design Thinking & boost Creative Confidence.</p>
                 </div>
-                <div className="spacer"></div>
+                {/* <div className="spacer"></div> */}
                 <div className="qualityCard">
                   <img src={handsOfInspiration} />
-                  <h3>4. Generate Ideas</h3>
+                  <h3>4. Generate <br/>Ideas</h3>
                   <p>Master the rules of successful brainstorming & improve your quality & quantity of ideas.</p>
                 </div>
 
@@ -126,6 +193,11 @@ class Home extends Component {
                   <img src={handsOfInspiration} />
                   <h3>5. Make Concepts Tangible</h3>
                   <p>Bring ideas to life and understand the value of prototyping throughout the design process.</p>
+                </div>
+                <div className="qualityCard">
+                  <img src={handsOfInspiration} />
+                  <h3>6. Build Creative Confidence</h3>
+                  <p>Empower your team by surfacing their creativity and giving them a process to innovate while having fun.</p>
                 </div>
 
               </div>

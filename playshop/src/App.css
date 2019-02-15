@@ -9,59 +9,6 @@ body {
   width: 50%;
 }
 
-.App-header {
-  position: relative;
-  padding: 9px 24px;
-  /* display: flex; */
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-header {
-  top: 0px;
-  height: 114px;
-  max-width: 1140px;
-  margin: auto;
-}
-
-.logoContainer {
-  display: block;
-  box-sizing: border-box;
-  float: left;
-  height: 100%;
-  width: auto;
-  /* left: 0px; */
-  background: blue;
-}
-
-.logoContainer img {
-  height: 100%;
-  max-width: 200px;
-}
-
-.menuContainer {
-  float: right;
-  width: auto;
-  margin: auto;
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.menuContainer p { 
-  color: gray;
-  font-size: 13px;
-  text-align: right; 
-  margin: auto;
-  padding: auto;
-  font-weight: bold;
-}
-
 .App-container {
   /* background: blue; */
   max-width: 1140px;
@@ -228,6 +175,9 @@ body {
 .workshop path {
   stroke: #67DDAB;
 }
+.popUp svg {
+  margin-top: -240px;
+}
 
 .popUp path {
   stroke: #8ECCEC;
@@ -303,6 +253,7 @@ body {
   overflow: hidden;
   padding-top: 240px;
   margin-top: -200px;
+  margin-bottom: -100px;
 }
 
 @keyframes spriteSheet-6frame {
@@ -336,7 +287,7 @@ body {
 }
 
 .workshopCardsContainer h1 {
-  margin: -120px 20px 100px;
+  margin: 100px 20px 100px;
   text-align: center;
   font-size: 48px;
   font-weight: bold;
@@ -616,11 +567,6 @@ footer img {
 }
 
 @media only screen and (max-width: 1140px) {
-  .App-header {
-      max-width: 100%;
-      height: 20px;
-  }
-
   .App-container {
     max-width: 100%;
     margin-top: 10px;

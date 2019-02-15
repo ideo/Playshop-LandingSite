@@ -1,0 +1,100 @@
+.App-header {
+    position: relative;
+    padding: 9px 24px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-header {
+    top: 0px;
+    height: 114px;
+    max-width: 1140px;
+    margin: auto;
+    z-index: 1;
+}
+
+.menuContainer button {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.mobileMenu {
+    display: none;
+}
+
+.menuContainer .dropdownParent , .menuContainer span {
+    color: gray;
+    font-size: 13px;
+    text-align: right; 
+    text-transform: uppercase;
+    margin: auto;
+    padding: auto;
+    font-weight: bold;
+}
+
+.menuContainer li {
+    display: inline-block;
+}
+
+.hoverMenu {
+    display: none;
+    position: absolute;
+    background: white;
+    padding: 6.5px 0;
+    border: 1px solid #f2f2f2;
+    z-index: 2;
+}
+
+.hoverMenu button {
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 1px;
+    font-weight: 600;
+    display: block;
+    text-transform: uppercase;
+    padding: .4em 1em;
+    color: rgba(0,0,0,.5)
+}
+
+li:hover .hoverMenu {
+    display: block; 
+}
+
+li:hover button.dropdownParent {
+    color: black;
+}
+
+button:hover {
+    color: black;
+}
+
+.logoContainer {
+    display: block;
+    box-sizing: border-box;
+    float: left;
+    height: 100%;
+    width: auto;
+    /* left: 0px; */
+    background: blue;
+}
+
+.logoContainer img {
+    height: 100%;
+    max-width: 200px;
+}
+
+.menuContainer {
+    float: right;
+    width: auto;
+    margin: auto;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    top: 50%;
+    transform: translateY(-50%);
+}
