@@ -4,6 +4,16 @@ body {
   overflow-x: hidden;
 }
 
+span.oscar {
+  color: #67DDAB;
+}
+span.ernie {
+  color: #FF9C1C;
+}
+span.cookie {
+  color: #8ECCEC;
+}
+
 .col6 {
   display: inline-block;
   width: 50%;
@@ -64,14 +74,15 @@ body {
 }
 
 .heroText h1 {
-  font-size: 72px;
+  font-size: 48px;
   font-weight: bold;
 }
 
 .heroText p {
   /* margin-top: 60px; */
-  font-size: 36px;
-  line-height: 1.22;
+  width: 100%;
+  font-size: 24px;
+  line-height: 1.5;
 }
 
 .heroText button {
@@ -151,10 +162,12 @@ body {
 
 .inspiration, .workshop {
   z-index: -10;
+  opacity: 0.3;
 }
 
 .popUp {
   z-index: -1;
+  opacity: 0.2;
 }
 
 .inspiration svg, .workshop svg, .popUp svg {
@@ -256,6 +269,34 @@ body {
   margin-bottom: -100px;
 }
 
+.emailContainer a {
+  color: #67DDAB;
+  /* border-bottom: black 2px solid; */
+  transition: padding 0.1s;
+}
+
+.emailContainer a:hover {
+  /* opacity: 0.5; */
+  text-decoration: none;
+  color: #67DDAB;
+  border-color: #67DDAB;
+  border-bottom: white 4px solid;
+  padding-bottom: 3px;
+  animation: greenStart 0.5s infinite;
+}
+
+@keyframes greenStart {
+  0% {
+    color: #8ECCEC;
+  }
+  50% {
+    color: #FF9C1C;
+  }
+  100% {
+    color: #67DDAB;
+  }
+}
+
 @keyframes spriteSheet-6frame {
   0% {
     transform: translateX(0px);
@@ -287,7 +328,10 @@ body {
 }
 
 .workshopCardsContainer h1 {
-  margin: 100px 20px 100px;
+  text-align: center;
+  font-family: serif;
+  font-style: italic;
+  margin: 70px 20px 140px;
   text-align: center;
   font-size: 48px;
   font-weight: bold;
@@ -314,7 +358,7 @@ body {
 }
 
 .qualityCard h3 {
-  font-family: serif;
+  /* font-family: serif; */
   font-weight: bold;
   font-size: 32px;
   text-align: center;
@@ -322,7 +366,9 @@ body {
 }
 
 .qualityCard p {
+  font-family: inherit;
   font-size: 18px;
+  font-weight: 500;
   text-align: center;
 }
 
@@ -543,6 +589,11 @@ button:active, button:focus {
   background-repeat: no-repeat;
   background-size: 30% 100%;
   background-position-x: 56%;
+} 
+
+.emailContainer h1 {
+  font-family: inherit;
+  font-style: normal;
 }
 
 footer {

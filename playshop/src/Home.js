@@ -136,8 +136,8 @@ class Home extends Component {
             </div>
             <div className="heroTextContainer col6">
               <div className="heroText">
-                <h1>From Play <br/>to Innovation Workshops</h1>
-                <p>Generate new concepts, <br/>build innovative culture, <br/>and enjoy the process <br/>with IDEO's Play Lab</p>
+                <h1>From Play to Innovation Workshops</h1>
+                <p>Generate new concepts, build innovative culture, and enjoy the process <br/>with IDEO's Play Lab</p>
                 <Link to={"/contact"}>
                     <button>Join Us</button>
                 </Link>
@@ -166,7 +166,7 @@ class Home extends Component {
               <div className="lightbulbAnimation" onClick={this.lightbulbClicked.bind(this)}>
                 <img src={telescope} className="telescope" style={this.state.bulbAnimation}/>
               </div>
-              <h1>Our workshops create a conducive environment for collaborative ideation through playful methods. Are you ready to build creative confidence and push your ideas beyond what has previously been imagined?</h1>
+              <h1>Our workshops create a conducive environment for collaborative ideation through playful methods. <br/>Are you ready to build creative confidence <br/>and push your ideas beyond what has <br/>previously been imagined?</h1>
 
               <div className="qualityCardsContainer">
               <h2>In the course of this interactive experience, participants will:</h2>
@@ -213,7 +213,7 @@ class Home extends Component {
               </div>
 
               <div className="contactContainer">
-                <h1>In addition to early concepts, participants walk away with a clear and actionable process for future innovation, with an emphasis on creating a low-stakes environments for creativity and play.</h1>
+                <h1>In addition to early concepts, participants will <br/>walk away with a clear and actionable process <br/>for future innovation, with an emphasis <br/>on creating a low-stakes environments <br/>for creativity and play.</h1>
                 <div className="summaryBackground popUp" style={{height: this.state.summaryRowHeight}}>
                   <PopUpLine />
                   <PopUpLine className="backPath"/>
@@ -223,11 +223,11 @@ class Home extends Component {
 
               <div className="emailContainer" ref={this.emailContainerRef}>
                 <div className="background" style={{height: this.state.emailContainerHeight}}></div>
-                <h1>Looking for more? <br/>We also lead inspiration tours, <br/>welcome speaking engagements <br/>& run full design sprints and projects.
+                <h1>Looking for more? <br/>We also lead <span className="oscar">inspiration tours</span>, <br/>welcome <span className="ernie">speaking engagements</span> <br/>& run <span className="cookie">full design sprints</span> and <span className="cookie">projects</span>.
                   <br/>
                   <br/>
                   Please reach out to us at:<br/>
-                  <a>play@ideo.com</a>
+                  <a href="mailto:play@ideo.com">play@ideo.com</a>
                 </h1>
               </div>
             </div>

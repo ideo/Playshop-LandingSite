@@ -63,10 +63,13 @@ class Contact extends Component {
             <div className="App-container">
                 <div className="sentContainer">
                     <img src={mailSent}></img>
-                    <h1>Thank you for your message. <br />We will get back to you as soon as ______.</h1>
+                    <h1>Thank you for your message. <br />We will get back to you as soon as we can.</h1>
                 </div>
                 <div className="formContainer">
                         <div className="form">
+                            <h2>Request a workshop!</h2>
+                            <p>Fill in the form, or, if you prefer, <a href="mailto:play@ideo.com">send us an email</a></p>
+
                             <form onSubmit={this.handleSubmit}>
                                 <input style={{transitionDelay: "0.03s"}} type="text" name="NAME" placeholder="What's your name?"></input> <br/>
                                 <input style={{transitionDelay: "0.05s"}} type="text" name="COMPANY" placeholder="Company"></input> <br/>
