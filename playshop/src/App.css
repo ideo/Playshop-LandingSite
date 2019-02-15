@@ -28,13 +28,23 @@ span.cookie {
 
 /* MARK: Hero */
 
+.pre-mounted .heroRow {
+}
+
 .heroRow {
   height: 600px; 
 }
 
+.pre-mounted .heroRow .videoContainer {
+  transform: translateX(-200px);
+  opacity: 0;
+}
+
 .heroRow .videoContainer {
+  transition: transform 0.6s 0.4s, opacity 0.5s 0.4s;
+  opacity: 1;
+  transform: translateX(0px);
   height: 100%;
-  background-color: green;
   display: inline-block;
   /* float: left; */
 }
@@ -51,7 +61,13 @@ span.cookie {
 
 }
 
+
+.pre-mounted .video img {
+  transform: translateX(-40px) scaleX(-1);
+}
+
 .video img {
+  transition: transform 0.8s 0.4s;
   clip-path: url(#heroClip);
   min-width: 100%;
   min-height: 100%;
@@ -73,19 +89,57 @@ span.cookie {
   transform: translateY(-48%);
 }
 
+.pre-mounted .heroText h1 span {
+  transform: translateY(100px); 
+  opacity: 0;
+}
+
+.heroText h1 .indv-Span {
+  overflow: hidden;
+  display: inline-block;
+  opacity: 1;
+  transition: transform 0.6s 0s cubic-bezier(0.145, 0.555, 0.375, 1.125), opacity 0.3s;
+  transform: translateY(0px);
+}
+
 .heroText h1 {
   font-size: 48px;
   font-weight: bold;
 }
 
+.pre-mounted p {
+  transform: translateY(100px); 
+  opacity: 0;
+}
+
 .heroText p {
+  transition: transform 0.6s 0.6s, opacity 0.3s 0.6s;
   /* margin-top: 60px; */
   width: 100%;
   font-size: 24px;
   line-height: 1.5;
 }
 
+.pre-mounted .heroText button {
+  opacity: 0;
+  transform: translateY(100px); 
+}
+
+@keyframes biggerIt {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .heroText button {
+  transition: transform 0.6s 0.8s, opacity 0.3s 0.9s;
+  animation: greenStartBack 1s 1.8s;
   font-size: 24px;
   font-weight: bold;
   color: white;
@@ -113,10 +167,16 @@ span.cookie {
 }
 
 .postIts {
+  transition: opacity 1s;
+  opacity: 0;
   vertical-align: top;
   width: 60%;
   padding: 80px 0 0px 80px;
   /* transform: translateY(-30%); */
+}
+
+.active .postIts {
+  opacity: 1;
 }
 
 .summaryRow img {
@@ -155,7 +215,6 @@ span.cookie {
 
 .summaryBackground path {
   fill: none;
-  stroke: red;
   stroke-width: 2px;
   stroke-dasharray: 10px;
   /* animation: pathSlow 5s linear infinite; */
@@ -168,6 +227,10 @@ span.cookie {
   stroke-dashoffset: 0px;
   transition: stroke-dashoffset 3s 0.4s, stroke-dasharray 2s 0.4s;
   /* animation: pathSlow 3.2s linear infinite;  */
+}
+
+.summaryRow path {
+  stroke-dashoffset: 1740px;
 }
 
 .inspiration, .workshop {
@@ -214,6 +277,15 @@ span.cookie {
 .active path {
   stroke-dashoffset: 0px;
   /* stroke-dasharray: 10px; */
+}
+
+.summaryRow .backPath path {
+  opacity: 0;
+  transition: opacity 0s 0.7s;
+}
+
+.active .backPath path {
+  opacity: 1;
 }
 
 .backPath path {

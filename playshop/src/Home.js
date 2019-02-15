@@ -101,10 +101,16 @@ class Home extends Component {
     super(props);
     this.summaryRowRef = React.createRef();
     this.emailContainerRef = React.createRef();
-    this.state = {showSummaryRow: "summaryRow", summaryRowHeight: "100%", emailContainerHeight: "100%", menuLevel: 0}
+    this.state = {showSummaryRow: "summaryRow", summaryRowHeight: "100%", emailContainerHeight: "100%", menuLevel: 0, mounted: "pre-mounted"}
   }
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll.bind(this));
+    setTimeout(() => {
+      this.setState({mounted: "mounted"});
+    }, 10);
+    setTimeout(() => {
+      this.setState({showSummaryRow: "summaryRow active"});
+    }, 4000);
   }
   lightbulbClicked() {
     console.log("CLICKED!!");
@@ -140,7 +146,7 @@ class Home extends Component {
   }
   render() {
     return (
-      <div className={"App menuLevelAll-" + this.state.menuLevel}onScroll={this.handleScroll}>
+      <div className={"App menuLevelAll-" + this.state.menuLevel + " " + this.state.mounted}onScroll={this.handleScroll}>
         
         <header className={"App-header menuLevel-" + this.state.menuLevel}>
             <div className="logoContainer">
@@ -211,7 +217,8 @@ class Home extends Component {
             </div>
             <div className="heroTextContainer col6">
               <div className="heroText">
-                <h1>From Play to Innovation Workshops</h1>
+                <h1><span className="indv-Span">From</span> <span className="indv-Span" style={{transitionDelay: "0.1s"}}>Play</span> <span className="indv-Span" style={{transitionDelay: "0.2s"}}>to</span><span className="indv-Span" style={{transitionDelay: "0.3s"}}>Innovation</span> <span className="indv-Span" style={{transitionDelay: "0.4s"}}>Workshops</span></h1>
+                {/* <h1><span style={{transitionDelay: "0.1s"}}>F</span><span style={{transitionDelay: "0.15s"}}>r</span><span style={{transitionDelay: "0.2s"}}>o</span><span style={{transitionDelay: "0.24s"}}>m</span><span style={{transitionDelay: "0.29s"}}> </span><span style={{transitionDelay: "0.33s"}}>P</span><span style={{transitionDelay: "0.37s"}}>l</span><span style={{transitionDelay: "0.4s"}}>a</span><span style={{transitionDelay: "0.44s"}}>y</span><span style={{transitionDelay: "0.48s"}}> </span><span style={{transitionDelay: "0.52s"}}>t</span><span style={{transitionDelay: "0.54s"}}>o</span><span style={{transitionDelay: "0.56s"}}> </span><span style={{transitionDelay: "0.57s"}}>I</span><span style={{transitionDelay: "0.1s"}}>n</span><span style={{transitionDelay: "0.1s"}}>n</span><span style={{transitionDelay: "0.1s"}}>o</span><span style={{transitionDelay: "0.1s"}}>v</span><span style={{transitionDelay: "0.1s"}}>a</span><span style={{transitionDelay: "0.1s"}}>t</span><span style={{transitionDelay: "0.1s"}}>i</span><span style={{transitionDelay: "0.1s"}}>o</span><span style={{transitionDelay: "0.1s"}}>n</span><span style={{transitionDelay: "0.1s"}}> </span><span style={{transitionDelay: "0.1s"}}>W</span><span style={{transitionDelay: "0.1s"}}>o</span><span style={{transitionDelay: "0.1s"}}>r</span><span style={{transitionDelay: "0.1s"}}>k</span><span style={{transitionDelay: "0.1s"}}>s</span><span style={{transitionDelay: "0.1s"}}>h</span><span style={{transitionDelay: "0.1s"}}>o</span><span style={{transitionDelay: "0.1s"}}>p</span><span style={{transitionDelay: "0.1s"}}>s</span></h1> */}
                 <p>Generate new concepts, build innovative culture, and enjoy the process <br/>with IDEO's Play Lab</p>
                 <button onClick={this.handleTopClick}>Join Us</button>
               </div>
