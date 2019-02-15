@@ -59,7 +59,7 @@ class Contact extends Component {
 
       render() {
         return (
-          <div className={this.state.contactClasses}>
+          <div className={this.state.contactClasses} id="contact-form">
             <div className="App-container">
                 <div className="sentContainer">
                     <img src={mailSent}></img>

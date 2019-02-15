@@ -24,6 +24,78 @@ import logo from './assets/D4Play_logo.jpg';
 import './Header.css'
 import './Mobile.css'
 
+var smoothScroll = {
+	timer: null,
+
+	stop: function () {
+		clearTimeout(this.timer);
+	},
+
+	scrollTo: function (id, callback) {
+		var settings = {
+			duration: 1500,
+			easing: {
+				outQuint: function (x, t, b, c, d) {
+					return c*((t=t/d-1)*t*t*t*t + 1) + b;
+				}
+			}
+		};
+		var percentage;
+		var startTime;
+		var node = document.getElementById(id);
+		var nodeTop = node.offsetTop;
+		var nodeHeight = node.offsetHeight;
+		var body = document.body;
+		var html = document.documentElement;
+		var height = Math.max(
+			body.scrollHeight,
+			body.offsetHeight,
+			html.clientHeight,
+			html.scrollHeight,
+			html.offsetHeight
+		);
+		var windowHeight = window.innerHeight
+		var offset = window.pageYOffset;
+		var delta = nodeTop - offset;
+		var bottomScrollableY = height - windowHeight;
+		var targetY = (bottomScrollableY < delta) ?
+			bottomScrollableY - (height - nodeTop - nodeHeight + offset):
+			delta;
+
+		startTime = Date.now();
+		percentage = 0;
+
+		if (this.timer) {
+			clearInterval(this.timer);
+		}
+
+		function step () {
+			var yScroll;
+			var elapsed = Date.now() - startTime;
+
+			if (elapsed > settings.duration) {
+				clearTimeout(this.timer);
+			}
+
+			percentage = elapsed / settings.duration;
+
+			if (percentage > 1) {
+				clearTimeout(this.timer);
+
+				if (callback) {
+					callback();
+				}
+			} else {
+				yScroll = settings.easing.outQuint(0, elapsed, offset, targetY, settings.duration);
+				window.scrollTo(0, yScroll);
+				this.timer = setTimeout(step, 10);     
+			}
+		}
+
+		this.timer = setTimeout(step, 10);
+	}
+};
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -62,6 +134,9 @@ class Home extends Component {
     console.log(e);
     console.log(id);
     this.setState({menuLevel: 2});
+  }
+  handleTopClick() {
+    smoothScroll.scrollTo('contact-form');
   }
   render() {
     return (
@@ -138,9 +213,7 @@ class Home extends Component {
               <div className="heroText">
                 <h1>From Play to Innovation Workshops</h1>
                 <p>Generate new concepts, build innovative culture, and enjoy the process <br/>with IDEO's Play Lab</p>
-                <Link to={"/contact"}>
-                    <button>Join Us</button>
-                </Link>
+                <button onClick={this.handleTopClick}>Join Us</button>
               </div>
             </div>
           </div>
@@ -214,7 +287,7 @@ class Home extends Component {
 
               <div className="contactContainer">
                 <h1>In addition to early concepts, participants will <br/>walk away with a clear and actionable process <br/>for future innovation, with an emphasis <br/>on creating a low-stakes environments <br/>for creativity and play.</h1>
-                <div className="summaryBackground popUp" style={{height: this.state.summaryRowHeight}}>
+                <div id="contact-form" className="summaryBackground popUp" style={{height: this.state.summaryRowHeight}}>
                   <PopUpLine />
                   <PopUpLine className="backPath"/>
                 </div>

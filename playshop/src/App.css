@@ -95,6 +95,16 @@ span.cookie {
   background-color: #67DDAB;
 }
 
+.heroText button:hover {
+  animation: greenStartBack 0.5s infinite;
+}
+
+.heroText button:focus {
+  outline: none;
+  opacity: 1;
+  border: none;
+}
+
 /* MARK: Summary Row */
 .summaryRow {
   width: 100%;
@@ -167,7 +177,7 @@ span.cookie {
 
 .popUp {
   z-index: -1;
-  opacity: 0.2;
+  opacity: 0.6;
 }
 
 .inspiration svg, .workshop svg, .popUp svg {
@@ -294,6 +304,18 @@ span.cookie {
   }
   100% {
     color: #67DDAB;
+  }
+}
+
+@keyframes greenStartBack {
+  0% {
+    background: #8ECCEC;
+  }
+  50% {
+    background: #FF9C1C;
+  }
+  100% {
+    background: #67DDAB;
   }
 }
 
