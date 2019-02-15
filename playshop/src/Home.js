@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import inspirationTourBalloon from './assets/InspirationTourBalloon.png';
 import handsOfInspiration from './assets/handsOfInspiration.png';
+import getInspired from './assets/image-1.png';
+import setFocus from './assets/image-2.png';
+import learnNewTools from './assets/image-3.png';
+import generateIdeas from './assets/image-4.png';
+import conceptsTangible from './assets/image-5.png';
+import buildCreativeConfidence from './assets/image-6.png';
 import telescope from './LightbulbAnimation/LightBulb-Strip.png';
 import { Link } from 'react-router-dom'
 import { ReactComponent as SummaryLine } from './assets/SummaryLine.svg';
@@ -170,36 +176,36 @@ class Home extends Component {
                 </div>
 
                 <div className="qualityCard">
-                  <img src={handsOfInspiration} />
+                  <img src={getInspired} />
                   <h3>1. Get Inspired</h3>
                   <p>Be introduced to compelling experiences that that will jump start fresh ideas.</p>
                 </div>
 
                 <div className="qualityCard">
-                  <img src={handsOfInspiration} />
+                  <img src={setFocus} />
                   <h3>2. Set Focus</h3>
                   <p>Identify rich opportunity areas that your team is well-positioned to purse.</p>
                 </div>
 
                 <div className="qualityCard">
-                  <img src={handsOfInspiration} />
+                  <img src={learnNewTools} />
                   <h3>3. Learn New Tools</h3>
                   <p>Activiely engage in activities that introduce Design Thinking & boost Creative Confidence.</p>
                 </div>
                 {/* <div className="spacer"></div> */}
                 <div className="qualityCard">
-                  <img src={handsOfInspiration} />
+                  <img src={generateIdeas} />
                   <h3>4. Generate <br/>Ideas</h3>
                   <p>Master the rules of successful brainstorming & improve your quality & quantity of ideas.</p>
                 </div>
 
                 <div className="qualityCard">
-                  <img src={handsOfInspiration} />
+                  <img src={conceptsTangible} />
                   <h3>5. Make Concepts Tangible</h3>
                   <p>Bring ideas to life and understand the value of prototyping throughout the design process.</p>
                 </div>
                 <div className="qualityCard">
-                  <img src={handsOfInspiration} />
+                  <img src={buildCreativeConfidence} />
                   <h3>6. Build Creative Confidence</h3>
                   <p>Empower your team by surfacing their creativity and giving them a process to innovate while having fun.</p>
                 </div>
