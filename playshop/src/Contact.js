@@ -77,7 +77,7 @@ class Contact extends Component {
                                 <input style={{transitionDelay: "0.13s"}} type="text" name="SIZE_OF_GROUP" placeholder="Size of Group"></input> <br/>
                                 <input style={{transitionDelay: "0.17s"}} type="text" name="APPR_DATE" placeholder="Approximate Date"></input> <br/>
                                 <input style={{transitionDelay: "0.21s"}} type="text" name="LOCATION" placeholder="Location"></input> <br/>
-                                <input style={{transitionDelay: "0.24s"}} type="text" name="OTHER_COMMENTS" placeholder="Anything else? Questions, comments? We're all ears."></input> <br/>
+                                <input style={{transitionDelay: "0.24s"}} type="text" name="OTHER_COMMENTS" placeholder="Anything else? Questions, comments?"></input> <br/>
                                 <input className="submitButton" type="submit" id="submit-form" value="Submit"/>
                             </form>
                         </div>
