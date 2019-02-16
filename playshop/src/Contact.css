@@ -210,6 +210,10 @@
     animation: greenStart 0.8s infinite;
 }
 
+.form input:focus {
+    outline: none;
+}
+
 .Contact h2, .Contact p {
     transition: opacity 1s 0s, transform 1s 0s;
 }
