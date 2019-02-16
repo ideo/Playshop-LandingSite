@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/Playshop-LandingSite/static/media/LightBulb-Strip.360071a7.png"
   },
   {
-    "revision": "406362a74b04a5e83af8",
-    "url": "/Playshop-LandingSite/static/css/main.d3a18faa.chunk.css"
+    "revision": "31d0d898692fbecdd0e4",
+    "url": "/Playshop-LandingSite/static/css/main.2c17f787.chunk.css"
   },
   {
     "revision": "767877f033b6c343f52c6d13c9bc9376",
@@ -48,8 +48,8 @@ self.__precacheManifest = [
     "url": "/Playshop-LandingSite/static/media/image-6.1218f086.png"
   },
   {
-    "revision": "406362a74b04a5e83af8",
-    "url": "/Playshop-LandingSite/static/js/main.406362a7.chunk.js"
+    "revision": "31d0d898692fbecdd0e4",
+    "url": "/Playshop-LandingSite/static/js/main.31d0d898.chunk.js"
   },
   {
     "revision": "cbba3d416aae9b346f6540fe1f257947",
@@ -92,7 +92,7 @@ self.__precacheManifest = [
     "url": "/Playshop-LandingSite/static/css/1.28e3650d.chunk.css"
   },
   {
-    "revision": "2c844ae58f161a1c3dcc064c619f8f6f",
+    "revision": "4463d93ab273e624cfb78ac4e625ea78",
     "url": "/Playshop-LandingSite/index.html"
   }
 ];
