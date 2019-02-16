@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1140px) {
+@media only screen and (max-width: 777px) {
     ::-webkit-scrollbar {
         width: 0px;  /* remove scrollbar space */
         background: transparent;  /* optional: just make scrollbar invisible */
@@ -16,7 +16,7 @@
 
     .logoContainer {
         overflow: hidden;
-        width: 22%;
+        /* width: 22%; */
     }
     .logoContainer img {
         margin-top: px;
@@ -96,6 +96,8 @@
     }
 
     .menuContainer .dropdownParent, .hoverMenu button {
+        text-align: left;
+        width: 100%;
         color: black;
         font-size: 16px;
         margin-bottom: 8px;
@@ -122,10 +124,27 @@
         /* transform: translateX(-160%); */
     }
 
+    .heroText span {
+        margin-top: -20px;
+    }
+
     .menuLevel-1 {
         /* transform: translateX(-70%); */
         /* position: absolute; */
     }
+
+    .Contact p {
+        text-align: left;
+    }
+
+    .summaryRow path {
+        stroke-dashoffset: 0px;
+        opacity: 1;
+    }
+    .summaryRow .backPath path {
+        opacity: 1;
+        transition: opacity 0s 0.7s;
+      }
 
     .menuLevelAll-1 {
         transform: translateX(-70%);
@@ -290,9 +309,14 @@
         margin: 0 20px;
     }
 
+    .form .submitButton {
+        width: 100%;
+    }
+
     footer {
         width: 100%;
         text-align: center;
+        margin-bottom: 40px;
     }
 
     footer div {
@@ -302,5 +326,6 @@
 
     footer img {
         float: none;
+        margin-bottom: 40px;
     }
 }

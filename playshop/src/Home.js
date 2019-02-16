@@ -217,7 +217,7 @@ class Home extends Component {
             </div>
             <div className="heroTextContainer col6">
               <div className="heroText">
-                <h1><span className="indv-Span">From</span> <span className="indv-Span" style={{transitionDelay: "0.1s"}}>Play</span> <span className="indv-Span" style={{transitionDelay: "0.2s"}}>to</span><span className="indv-Span" style={{transitionDelay: "0.3s"}}>Innovation</span> <span className="indv-Span" style={{transitionDelay: "0.4s"}}>Workshops</span></h1>
+                <h1><span className="indv-Span">From</span> <span className="indv-Span" style={{transitionDelay: "0.1s"}}>Play</span> <span className="indv-Span" style={{transitionDelay: "0.2s"}}>to</span> <span className="indv-Span" style={{transitionDelay: "0.3s"}}>Innovation</span> <span className="indv-Span" style={{transitionDelay: "0.4s"}}>Workshops</span></h1>
                 {/* <h1><span style={{transitionDelay: "0.1s"}}>F</span><span style={{transitionDelay: "0.15s"}}>r</span><span style={{transitionDelay: "0.2s"}}>o</span><span style={{transitionDelay: "0.24s"}}>m</span><span style={{transitionDelay: "0.29s"}}> </span><span style={{transitionDelay: "0.33s"}}>P</span><span style={{transitionDelay: "0.37s"}}>l</span><span style={{transitionDelay: "0.4s"}}>a</span><span style={{transitionDelay: "0.44s"}}>y</span><span style={{transitionDelay: "0.48s"}}> </span><span style={{transitionDelay: "0.52s"}}>t</span><span style={{transitionDelay: "0.54s"}}>o</span><span style={{transitionDelay: "0.56s"}}> </span><span style={{transitionDelay: "0.57s"}}>I</span><span style={{transitionDelay: "0.1s"}}>n</span><span style={{transitionDelay: "0.1s"}}>n</span><span style={{transitionDelay: "0.1s"}}>o</span><span style={{transitionDelay: "0.1s"}}>v</span><span style={{transitionDelay: "0.1s"}}>a</span><span style={{transitionDelay: "0.1s"}}>t</span><span style={{transitionDelay: "0.1s"}}>i</span><span style={{transitionDelay: "0.1s"}}>o</span><span style={{transitionDelay: "0.1s"}}>n</span><span style={{transitionDelay: "0.1s"}}> </span><span style={{transitionDelay: "0.1s"}}>W</span><span style={{transitionDelay: "0.1s"}}>o</span><span style={{transitionDelay: "0.1s"}}>r</span><span style={{transitionDelay: "0.1s"}}>k</span><span style={{transitionDelay: "0.1s"}}>s</span><span style={{transitionDelay: "0.1s"}}>h</span><span style={{transitionDelay: "0.1s"}}>o</span><span style={{transitionDelay: "0.1s"}}>p</span><span style={{transitionDelay: "0.1s"}}>s</span></h1> */}
                 <p>Generate new concepts, build innovative culture, and enjoy the process <br/>with IDEO's Play Lab</p>
                 <button onClick={this.handleTopClick}>Join Us</button>
@@ -246,7 +246,7 @@ class Home extends Component {
               <div className="lightbulbAnimation" onClick={this.lightbulbClicked.bind(this)}>
                 <img src={telescope} className="telescope" style={this.state.bulbAnimation}/>
               </div>
-              <h1>Our workshops create a conducive environment for collaborative ideation through playful methods. <br/>Are you ready to build creative confidence <br/>and push your ideas beyond what has <br/>previously been imagined?</h1>
+              <h1>Our workshops create a <br/>conducive environment for <br/>collaborative ideation through playful methods. <br/>Are you ready to build creative confidence <br/>and push your ideas beyond what has <br/>previously been imagined?</h1>
 
               <div className="qualityCardsContainer">
               <h2>In the course of this interactive experience, participants will:</h2>
@@ -270,7 +270,7 @@ class Home extends Component {
                 <div className="qualityCard">
                   <img src={learnNewTools} />
                   <h3>3. Learn New Tools</h3>
-                  <p>Activiely engage in activities that introduce Design Thinking & boost Creative Confidence.</p>
+                  <p>Activitely engage in activities that introduce Design Thinking & boost Creative Confidence.</p>
                 </div>
                 {/* <div className="spacer"></div> */}
                 <div className="qualityCard">

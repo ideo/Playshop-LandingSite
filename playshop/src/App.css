@@ -423,7 +423,7 @@ span.cookie {
 
 .workshopCardsContainer h1 {
   text-align: center;
-  font-family: serif;
+  font-family: "Sentinel A", "Sentinel B", serif;
   font-style: italic;
   margin: 70px 20px 140px;
   text-align: center;
@@ -722,7 +722,7 @@ footer img {
   height: 100%;
 }
 
-@media only screen and (max-width: 1140px) {
+@media only screen and (max-width: 777px) {
   .App-container {
     max-width: 100%;
     margin-top: 10px;
@@ -742,5 +742,51 @@ footer img {
     /* margin-left: calc((-100vw + 1140px)/2); */
     /* transform: translateX(-50%) */
     margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 1140px) and (min-width: 777px) {
+  .videoContainer {
+    overflow: hidden;
+    width: 50%;
+    margin-left: 0;
+  }
+
+  .videoContainer img {
+    float: inset;
+  }
+
+  .App-container {
+    max-width: 100%;
+    margin-top: 10px;
+  }
+
+  .summaryRow {
+    padding: 0 20px;
+  }
+
+  .workshopCardsContainer {
+    padding: 0 calc((-100vw + 1140px)/2);
+  }
+
+  .formContainer .form {
+    padding: 0 calc((-100vw + 1140px)/2) !important;
+  }
+
+
+  footer {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 200px;
+  }
+
+  footer div {
+      display: block;
+      width: 100%;
+  }
+
+  footer img {
+      float: none;
+      margin-bottom: 40px;
   }
 }
