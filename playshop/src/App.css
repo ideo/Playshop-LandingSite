@@ -170,6 +170,7 @@ span.cookie {
 }
 
 .postIts {
+  margin-top: 15%;
   transition: opacity 1s;
   opacity: 0;
   vertical-align: top;

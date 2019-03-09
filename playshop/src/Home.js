@@ -219,7 +219,7 @@ class Home extends Component {
               <div className="heroText">
                 <h1><span className="indv-Span">From</span> <span className="indv-Span" style={{transitionDelay: "0.1s"}}>Play</span> <span className="indv-Span" style={{transitionDelay: "0.2s"}}>to</span> <span className="indv-Span" style={{transitionDelay: "0.3s"}}>Innovation</span> <span className="indv-Span" style={{transitionDelay: "0.4s"}}>Workshops</span></h1>
                 {/* <h1><span style={{transitionDelay: "0.1s"}}>F</span><span style={{transitionDelay: "0.15s"}}>r</span><span style={{transitionDelay: "0.2s"}}>o</span><span style={{transitionDelay: "0.24s"}}>m</span><span style={{transitionDelay: "0.29s"}}> </span><span style={{transitionDelay: "0.33s"}}>P</span><span style={{transitionDelay: "0.37s"}}>l</span><span style={{transitionDelay: "0.4s"}}>a</span><span style={{transitionDelay: "0.44s"}}>y</span><span style={{transitionDelay: "0.48s"}}> </span><span style={{transitionDelay: "0.52s"}}>t</span><span style={{transitionDelay: "0.54s"}}>o</span><span style={{transitionDelay: "0.56s"}}> </span><span style={{transitionDelay: "0.57s"}}>I</span><span style={{transitionDelay: "0.1s"}}>n</span><span style={{transitionDelay: "0.1s"}}>n</span><span style={{transitionDelay: "0.1s"}}>o</span><span style={{transitionDelay: "0.1s"}}>v</span><span style={{transitionDelay: "0.1s"}}>a</span><span style={{transitionDelay: "0.1s"}}>t</span><span style={{transitionDelay: "0.1s"}}>i</span><span style={{transitionDelay: "0.1s"}}>o</span><span style={{transitionDelay: "0.1s"}}>n</span><span style={{transitionDelay: "0.1s"}}> </span><span style={{transitionDelay: "0.1s"}}>W</span><span style={{transitionDelay: "0.1s"}}>o</span><span style={{transitionDelay: "0.1s"}}>r</span><span style={{transitionDelay: "0.1s"}}>k</span><span style={{transitionDelay: "0.1s"}}>s</span><span style={{transitionDelay: "0.1s"}}>h</span><span style={{transitionDelay: "0.1s"}}>o</span><span style={{transitionDelay: "0.1s"}}>p</span><span style={{transitionDelay: "0.1s"}}>s</span></h1> */}
-                <p>Generate new concepts, build innovative culture, and enjoy the process <br/>with IDEO's Play Lab</p>
+                <p>Generate new concepts, build innovative culture, and see just how fun the design process can be!</p>
                 <button onClick={this.handleTopClick}>Join Us</button>
               </div>
             </div>
@@ -230,9 +230,11 @@ class Home extends Component {
                 <SummaryLine className="backPath" id="clipper"/>
               </div>
               <div className="summary">
-              <h1>A design-thinking workshop with a playful twist!</h1>
+              <h1>Design Thinking<br/> with a Playful <br/>Twist!</h1>
 
-                  <p>Building upon a rich history as part of a world-renowned design firm, IDEO Play Lab will inspire your team to unleash their creativity & innovation.</p>
+                  <p>As IDEO, we bring innovative design to a breadth of industries, including health, finance and education.</p>
+                  <p>As toy inventors, we partner with top toy companies to bring delightful play experiences to market.</p>
+                  <p>We combine a wealth of expertise and practical tips – plus a healthy dose of laughter – to bring you a tailored workshop that will transform how you approach some of your organization's toughest challenges.</p>
               </div>
               <div className="postIts col6">
                 <img src={postIts}></img>
@@ -248,7 +250,7 @@ class Home extends Component {
                   <img src={telescope} className="telescope" style={this.state.bulbAnimation}/>
                 </div>
               </div>
-              <h1>Our workshops create a <br/>conducive environment for <br/>collaborative ideation through playful methods. <br/>Are you ready to build creative confidence <br/>and push your ideas beyond what has <br/>previously been imagined?</h1>
+              <h1>Our workshops <br/>leverage the power of play<br/>to facilitate collaborative ideation. <br/>Are you ready to build creative confidence <br/>and push your ideas beyond what has <br/>previously been imagined?</h1>
 
               <div className="qualityCardsContainer">
               <h2>In the course of this interactive experience, participants will:</h2>
@@ -266,7 +268,7 @@ class Home extends Component {
                 <div className="qualityCard">
                   <img src={setFocus} />
                   <h3>2. Set Focus</h3>
-                  <p>Identify rich opportunity areas that your team is well-positioned to purse.</p>
+                  <p>Identify rich opportunity areas that your team is well-positioned to pursue. Workshops are custom designed to address your team's specific challenges.</p>
                 </div>
 
                 <div className="qualityCard">

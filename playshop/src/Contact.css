@@ -120,12 +120,13 @@
 .form .submitButton {
     width: 300px;
     background: #67DDAB;
-    color: #070707;
+    color: white;
     margin: 40px auto;
     padding: 20px 0;
     border: none;
     outline: none;
     display: block;
+    text-transform: capitalize;
 }
 
 .form h2 {
@@ -163,8 +164,9 @@
 }
 
 .form .submitButton:hover {
-    color: white;
-    background: #070707;
+    /* color: white; */
+    /* background: #070707; */
+    animation: greenStartBack 1s infinite;      
 }
 
 .Contact .formContainer {
