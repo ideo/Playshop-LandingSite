@@ -152,11 +152,8 @@ class Home extends Component {
             <div className="logoContainer">
                 <img src={logo} />
             </div>
-            <div className="menuContainer">
+            {/* <div className="menuContainer">
                 <button className="mobileMenu" onClick={this.onClickMenu.bind(this)}>
-                    {/* <div />
-                    <div />
-                    <div /> */}
 
                     <svg className="hamburger" height="32px" id="Layer_1" version="1.1" viewBox="0 0 32 32" width="32px"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
                     <svg className="cross" height="32px" id="Layer_1" version="1.1" viewBox="0 0 32 32" width="32px"><path d="M28,14H18V4c0-1.104-0.896-2-2-2s-2,0.896-2,2v10H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h10v10c0,1.104,0.896,2,2,2  s2-0.896,2-2V18h10c1.104,0,2-0.896,2-2S29.104,14,28,14z"/></svg>                </button>
@@ -175,12 +172,6 @@ class Home extends Component {
                     <li style={{transitionDelay: "0.1s"}}>
                         <button className="dropdownParent" onClick={this.onClickSubmenu.bind(this, 2)} id="item-2">Sesame Street</button>
                         <div className="hoverMenu">
-                        {/* <div className="mobile mobileTitle">
-                            <button className="back-chevron">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>
-                            </button>
-                            <p>Sesame Street</p>
-                        </div> */}
                         <a target="_blank" href="http://www.ideotoylab.com/elmocalls/"><button>Elmo Calls</button></a>
                         <a target="_blank" href="http://www.ideotoylab.com/cookiecalls/"><button>Cookie Calls</button></a>
                         <a target="_blank" href="http://www.ideotoylab.com/elmosmonstermaker"><button>Elmo's Monster Maker</button></a>
@@ -191,12 +182,6 @@ class Home extends Component {
                     <li style={{transitionDelay: "0.2s"}}>
                         <button className="dropdownParent" onClick={this.onClickSubmenu.bind(this, 3)} id="item-3">Fisher-Price</button>
                         <div className="hoverMenu">
-                            {/* <div className="mobile mobileTitle">
-                                <button className="back-chevron">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>
-                                </button>
-                                <p>Fisher-Price</p>
-                            </div> */}
                             <a target="_blank" href="http://www.ideotoylab.com/seensay"><button>See 'n Say</button></a>
                         </div>
                     </li>
@@ -205,7 +190,7 @@ class Home extends Component {
                         <a target="_blank" href="http://www.ideotoylab.com/support"><button className="dropdownParent" onClick={this.onClickSubmenu.bind(this, 4)} id="item-4">Support</button></a>
                     </li>
                 </ul>
-            </div>
+            </div> */}
           </header>
 
         <div className={"App-container menuLevel-" + this.state.menuLevel}> 

@@ -166,7 +166,7 @@
 .form .submitButton:hover {
     /* color: white; */
     /* background: #070707; */
-    animation: greenStartBack 1s infinite;      
+    animation: greenStartBack 0.7s infinite;      
 }
 
 .Contact .formContainer {
