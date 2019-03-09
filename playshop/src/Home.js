@@ -243,8 +243,10 @@ class Home extends Component {
                 <InspirationLine />
                 <InspirationLine className="backPath"/>
               </div>
-              <div className="lightbulbAnimation" onClick={this.lightbulbClicked.bind(this)}>
-                <img src={telescope} className="telescope" style={this.state.bulbAnimation}/>
+              <div className="lightbulbContainer">
+                <div className="lightbulbAnimation" onClick={this.lightbulbClicked.bind(this)}>
+                  <img src={telescope} className="telescope" style={this.state.bulbAnimation}/>
+                </div>
               </div>
               <h1>Our workshops create a <br/>conducive environment for <br/>collaborative ideation through playful methods. <br/>Are you ready to build creative confidence <br/>and push your ideas beyond what has <br/>previously been imagined?</h1>
 
@@ -258,7 +260,7 @@ class Home extends Component {
                 <div className="qualityCard">
                   <img src={getInspired} />
                   <h3>1. Get Inspired</h3>
-                  <p>Be introduced to compelling experiences that that will jump start fresh ideas.</p>
+                  <p>Be introduced to compelling experiences that that will jump-start fresh ideas.</p>
                 </div>
 
                 <div className="qualityCard">
@@ -270,13 +272,13 @@ class Home extends Component {
                 <div className="qualityCard">
                   <img src={learnNewTools} />
                   <h3>3. Learn New Tools</h3>
-                  <p>Activitely engage in activities that introduce Design Thinking & boost Creative Confidence.</p>
+                  <p>Get a crash course in <a href="https://designthinking.ideo.com/" target="_blank">Design Thinking</a> techniques and boost <a href="https://www.ideo.com/post/creative-confidence" target="_blank">Creative Confidence</a>.</p>
                 </div>
                 {/* <div className="spacer"></div> */}
                 <div className="qualityCard">
                   <img src={generateIdeas} />
                   <h3>4. Generate <br/>Ideas</h3>
-                  <p>Master the rules of successful brainstorming & improve your quality & quantity of ideas.</p>
+                  <p>Master the rules of successful brainstorming to improve the quality & quantity of team's ideas.</p>
                 </div>
 
                 <div className="qualityCard">
@@ -306,7 +308,7 @@ class Home extends Component {
                 <h1>Looking for more? <br/>We also lead <span className="oscar">inspiration tours</span>, <br/>welcome <span className="ernie">speaking engagements</span> <br/>& run <span className="cookie">full design sprints</span> and <span className="cookie">projects</span>.
                   <br/>
                   <br/>
-                  Please reach out to us at:<br/>
+                  Come play with us:<br/>
                   <a href="mailto:play@ideo.com">play@ideo.com</a>
                 </h1>
               </div>

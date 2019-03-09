@@ -1,6 +1,10 @@
 /* MARK: Header */
-body {
-  font-family: 'Gotham';
+html, body {
+  font-family: "Gotham A", "Gotham B";
+  overflow-x: hidden;
+}
+
+html {
   overflow-x: hidden;
 }
 
@@ -68,7 +72,6 @@ span.cookie {
 
 .video img {
   transition: transform 0.8s 0.4s;
-  clip-path: url(#heroClip);
   min-width: 100%;
   min-height: 100%;
   transform: scaleX(-1);
@@ -210,14 +213,12 @@ span.cookie {
   margin-right: -80px;
   margin-left: calc(70px + 30%);
   position: absolute;
-  clip-path: url(#clipper);
 }
 
 .summaryBackground path {
   fill: none;
   stroke-width: 2px;
   stroke-dasharray: 10px;
-  /* animation: pathSlow 5s linear infinite; */
   transition: stroke-linecap 1s, stroke-width 1s;
 }
 
@@ -226,7 +227,6 @@ span.cookie {
   stroke-dasharray: 1740px;
   stroke-dashoffset: 0px;
   transition: stroke-dashoffset 3s 0.4s, stroke-dasharray 2s 0.4s;
-  /* animation: pathSlow 3.2s linear infinite;  */
 }
 
 .summaryRow path {
@@ -293,7 +293,7 @@ span.cookie {
   stroke: #8ECCEC;
   stroke-width: 4px;
   stroke-dasharray: 10px;
-  stroke-dashoffset: 0px;
+  stroke-dashoffset: 20px;
   transition: opacity 0.2s 0.4s;
   animation: pathSlow 3.2s linear infinite; 
 }
@@ -304,7 +304,7 @@ span.cookie {
 
 @keyframes pathSlow {
   100% {
-    stroke-dashoffset: -20px;
+    stroke-dashoffset: 0px;
   }
 }
 
@@ -354,6 +354,7 @@ span.cookie {
 .emailContainer a {
   color: #67DDAB;
   /* border-bottom: black 2px solid; */
+  border-bottom: #8ECCEC 4px solid;
   transition: padding 0.1s;
 }
 
@@ -362,7 +363,7 @@ span.cookie {
   text-decoration: none;
   color: #67DDAB;
   border-color: #67DDAB;
-  border-bottom: white 4px solid;
+  border-bottom: #FF9C1C 4px solid;
   padding-bottom: 3px;
   animation: greenStart 0.5s infinite;
 }
@@ -464,6 +465,16 @@ span.cookie {
   font-size: 18px;
   font-weight: 500;
   text-align: center;
+}
+
+.qualityCard a {
+  color: gray;
+  /* border-bottom: solid 2px gray; */
+  text-decoration: underline;
+}
+
+.qualityCard a:hover {
+  color: #8ECCEC;
 }
 
 .spacer {

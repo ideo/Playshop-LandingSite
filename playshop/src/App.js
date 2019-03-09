@@ -6,7 +6,7 @@ import Contact from './Contact'
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="App top">
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/contact' component={Contact} />
